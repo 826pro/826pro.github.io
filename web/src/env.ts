@@ -5,6 +5,7 @@ const envSchema = z.object({
   VITE_USER_TOKEN: z.string(),
   VITE_INSTANCE_ID: z.string(),
   VITE_INSTANCE_TOKEN: z.string(),
+  VITE_NUMERO_TELEFONE: z.string(),
 });
 
 export const env = envSchema.parse(import.meta.env);

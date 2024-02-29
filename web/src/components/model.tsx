@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -43,6 +44,7 @@ interface ModelProps {
 export function Model({ cardData }: ModelProps) {
   const { register, handleSubmit, setValue } = useForm<ModelSchema>();
   const [error, setError] = useState<string | null>(null);
+  console.log(error);
 
   const GZAPPY_URL = env.VITE_API_URL;
 
@@ -54,41 +56,48 @@ export function Model({ cardData }: ModelProps) {
 
   const onSubmit = async (data: ModelSchema) => {
     try {
-      const message = Object.entries(data)
-        .map(([key, value]) => `${key}: ${value}`)
-        .join("\n");
+      // Traduzindo os dados para português antes de enviar
+      const translatedData = {
+        nome: data.name,
+        endereço: data.address,
+        pagamento: data.payment,
+        título: data.title,
+        descrição: data.description,
+        foto: data.photo,
+        preço: data.price,
+      };
+
+      const message = Object.entries(translatedData).map(([key, value]) => `${key}: ${value}`).join("\n");
       const requestBody = {
         instance_id: env.VITE_INSTANCE_ID,
         instance_token: env.VITE_INSTANCE_TOKEN,
         message: message,
-        phone: ["553291244855"],
+        phone: [env.VITE_NUMERO_TELEFONE]
       };
-
+  
       const response = await fetch(GZAPPY_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          user_token_id: env.VITE_USER_TOKEN,
+          "user_token_id": env.VITE_USER_TOKEN,
         },
-        body: JSON.stringify(requestBody),
+        body: JSON.stringify(requestBody)
       });
-
+  
       if (response.ok) {
         console.log("Mensagem enviada com sucesso!");
-        window.location.reload();
+        window.location.reload(); 
         toast.success("Pedido enviado com sucesso");
       } else {
         throw new Error("Erro ao enviar mensagem.");
       }
     } catch (error) {
       setError("Erro ao enviar mensagem. Por favor, tente novamente.");
-      console.log(error);
+      console.error(error);
       toast.error("Erro ao enviar pedido");
     }
-
-    console.log(error);
   };
-
+  
   return (
     <DialogContent className="w-72 md:w-auto">
       <DialogHeader>
@@ -100,6 +109,7 @@ export function Model({ cardData }: ModelProps) {
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="space-y-4 py-4">
+          
           <div className="grid grid-cols-4 items-center gap-4">
             <Input
               className="col-span-3"
@@ -152,13 +162,15 @@ export function Model({ cardData }: ModelProps) {
               readOnly
             />
           </div>
-          <div className="grid grid-cols-4 items-center gap-4">
+          <div className="relative grid grid-cols-4 items-center gap-4">
+            <span className="absolute left-1">R$</span>
             <Input
-              className="col-span-3"
+              className="col-span-3 pl-6"
               {...register("price")}
-              defaultValue={cardData.price}
+              value={`R$ ${cardData.price}`}
               readOnly
             />
+            <span className="absolute left-[45.5px]">,00</span>
           </div>
         </div>
         <DialogFooter>
