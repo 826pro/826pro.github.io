@@ -1,0 +1,119 @@
+[
+    {
+      "title": "Macarrão mediterrâneo",
+      "description": "Macarrão spaghetti com frutos-do-mar e especíarias, especialidade da cozinha. Atenção: Contém camarão e outros frutos-do-mar!",
+      "photo": "https://images.unsplash.com/photo-1576402738587-4f748fff5ba1?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "size": 400,
+      "serving": 2,
+      "price": 73.0,
+      "id": 1,
+      "category": {
+        "id": 1,
+        "label": "Massas"
+      }
+    },
+    {
+      "title": "Macarrão da casa",
+      "description": "Macarrão com frutos-do-mar e especíarias, especialidade da cozinha. Atenção: Contém camarão e outros frutos-do-mar!",
+      "photo": "https://images.unsplash.com/photo-1504669887860-f6d4cc3feb4b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "size": 400,
+      "serving": 2,
+      "price": 54.0,
+      "id": 2,
+      "category": {
+        "id": 1,
+        "label": "Massas"
+      }
+    },
+    {
+      "title": "Macarrão com chilli",
+      "description": "Macarrão fetuccine com molho de chilli e especiárias.",
+      "photo": "https://images.unsplash.com/photo-1694370472713-5e42943a4e8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1hY2FyciVDMyVBM28lMjBjb20lMjBjaGlsbGl8ZW58MHx8MHx8fDA%3D",
+      "size": 350,
+      "serving": 1,
+      "price": 58.0,
+      "id": 3,
+      "category": {
+        "id": 1,
+        "label": "Massas"
+      }
+    },
+    {
+      "title": "Salada da casa com salmão grelhado",
+      "description": "Salada da casa (alface, rúcula, cenoura) com salmão.",
+      "photo": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "size": 450,
+      "serving": 1,
+      "price": 42.0,
+      "id": 4,
+      "category": {
+        "id": 2,
+        "label": "Carnes"
+      }
+    },
+    {
+      "title": "Bife com batatas",
+      "description": "Bife de boi (150g) na chapa, com batatas fritas. Acompanha arroz e molhos.",
+      "photo": "https://images.unsplash.com/photo-1546964124-0cce460f38ef?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "size": 550,
+      "serving": 2,
+      "price": 86.0,
+      "id": 5,
+      "category": {
+        "id": 2,
+        "label": "Carnes"
+      }
+    },
+    {
+      "title": "Picanha picada com legumes e massa",
+      "description": "400g de picanha picada, com legumes grelhados e massa escolhida pelo cliente.",
+      "photo": "https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "size": 850,
+      "serving": 3,
+      "price": 123.0,
+      "id": 6,
+      "category": {
+        "id": 3,
+        "label": "Combos"
+      }
+    },
+    {
+      "title": "Lasagna vegana (carne de soja)",
+      "description": "Lasagna 100% vegana feita com carne de soja e massa especial.",
+      "photo": "https://www.saboresajinomoto.com.br/uploads/images/recipes/proteina-de-soja-xadrez.jpg",
+      "size": 350,
+      "serving": 1,
+      "price": 45.0,
+      "id": 7,
+      "category": {
+        "id": 4,
+        "label": "Veganos"
+      }
+    },
+    {
+      "title": "Salada especial",
+      "description": "Salada com abacate, manga, alface, grão de bico e muito mais.",
+      "photo": "https://images.unsplash.com/photo-1669283723966-3437546829cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2FsYWRhJTIwZXNwZWNpYWx8ZW58MHx8MHx8fDA%3D",
+      "size": 350,
+      "serving": 1,
+      "price": 37.0,
+      "id": 8,
+      "category": {
+        "id": 4,
+        "label": "Veganos"
+      }
+    },
+    {
+      "title": "Almôndegas",
+      "description": "Porção de almôndegas com sour cream, cebola e tempêros. Acompanha arroz ou massa.",
+      "photo": "https://images.unsplash.com/photo-1598511726623-d2e9996892f0?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "size": 740,
+      "serving": 3,
+      "price": 120.0,
+      "id": 9,
+      "category": {
+        "id": 3,
+        "label": "Combos"
+      }
+    }
+  ]
