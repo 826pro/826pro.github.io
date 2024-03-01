@@ -11,7 +11,7 @@ export function App() {
   return (
     <HelmetProvider>
       <ThemeProvider storageKey="lachonete-theme" defaultTheme="light">
-        <Helmet titleTemplate="%s | Lanchonete Deu Fome" />
+        <Helmet titleTemplate="%s | Rosticcerie Palestrini" />
         <Toaster richColors />
         <RouterProvider router={router} />
       </ThemeProvider>
